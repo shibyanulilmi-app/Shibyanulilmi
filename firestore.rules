@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read/write for all application collections
+    match /app_data/{docId} {
+      allow read, write: if true;
+    }
+    match /settings/{docId} {
+      allow read, write: if true;
+    }
+    match /santri/{docId} {
+      allow read, write: if true;
+    }
+    match /setoran/{docId} {
+      allow read, write: if true;
+    }
+    match /users/{docId} {
+      allow read, write: if true;
+    }
+    match /kelas/{docId} {
+      allow read, write: if true;
+    }
+    match /galeri/{docId} {
+      allow read, write: if true;
+    }
+    match /profil/{docId} {
+      allow read, write: if true;
+    }
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

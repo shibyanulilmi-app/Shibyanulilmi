@@ -1,0 +1,8 @@
+{
+  "name": "shibyanulilmi v1",
+  "description": "Aplikasi Monitoring Perkembangan Mengaji \u0026 Setoran Hafalan Qur\u0027an (Iqro\u0027, Tajwid, Tahsin, Tahfizh) dengan Sistem Poin, Badge, Leaderboard, dan Manajemen Santri berbasis NIS",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

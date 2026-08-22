@@ -1,0 +1,102 @@
+{
+  "entities": {
+    "AppSettings": {
+      "title": "AppSettings",
+      "description": "Pengaturan identitas aplikasi, branding lembaga, sistem poin, dan konfigurasi tampilan",
+      "type": "object",
+      "properties": {
+        "nama_aplikasi": { "type": "string" },
+        "tagline": { "type": "string" },
+        "nama_lembaga": { "type": "string" },
+        "alamat_lembaga": { "type": "string" },
+        "telepon_lembaga": { "type": "string" },
+        "nama_kepala": { "type": "string" },
+        "kota_cetak": { "type": "string" },
+        "poin_nilai_a": { "type": "number" },
+        "poin_nilai_b": { "type": "number" },
+        "poin_nilai_c": { "type": "number" },
+        "bonus_lancar": { "type": "number" },
+        "penalti_perbaikan": { "type": "number" },
+        "bonus_waktu_pagi": { "type": "number" }
+      }
+    },
+    "SantriList": {
+      "title": "SantriList",
+      "description": "Daftar santri aktif beserta profil, rombel kelas, dan target juz",
+      "type": "object",
+      "properties": {
+        "list": { "type": "array" }
+      }
+    },
+    "SetoranList": {
+      "title": "SetoranList",
+      "description": "Daftar riwayat setoran hafalan dan simak mengaji santri",
+      "type": "object",
+      "properties": {
+        "list": { "type": "array" }
+      }
+    },
+    "UserList": {
+      "title": "UserList",
+      "description": "Daftar akun pengguna ustadz, admin, dan santri",
+      "type": "object",
+      "properties": {
+        "list": { "type": "array" }
+      }
+    },
+    "KelasList": {
+      "title": "KelasList",
+      "description": "Daftar rombel kelas dan kelompok halaqah mengaji",
+      "type": "object",
+      "properties": {
+        "list": { "type": "array" }
+      }
+    },
+    "GaleriList": {
+      "title": "GaleriList",
+      "description": "Daftar foto dokumentasi kegiatan dan prestasi",
+      "type": "object",
+      "properties": {
+        "list": { "type": "array" }
+      }
+    },
+    "ProfilDoc": {
+      "title": "ProfilDoc",
+      "description": "Profil lengkap dan visi misi lembaga pendidikan",
+      "type": "object",
+      "properties": {
+        "data": { "type": "object" }
+      }
+    }
+  },
+  "firestore": {
+    "/app_data/settings": {
+      "schema": "AppSettings",
+      "description": "Konfigurasi global aplikasi dan sistem poin"
+    },
+    "/app_data/santri": {
+      "schema": "SantriList",
+      "description": "Daftar data santri"
+    },
+    "/app_data/setoran": {
+      "schema": "SetoranList",
+      "description": "Riwayat catatan setoran hafalan & simak santri"
+    },
+    "/app_data/users": {
+      "schema": "UserList",
+      "description": "Daftar akun pengguna"
+    },
+    "/app_data/kelas": {
+      "schema": "KelasList",
+      "description": "Daftar rombel kelas"
+    },
+    "/app_data/galeri": {
+      "schema": "GaleriList",
+      "description": "Daftar galeri kegiatan"
+    },
+    "/app_data/profil": {
+      "schema": "ProfilDoc",
+      "description": "Data profil lembaga"
+    }
+  }
+}
